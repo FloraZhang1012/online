@@ -60,7 +60,7 @@ import axios from 'axios'
 import FavoriteButton from "@/views/home/FavoriteButton.vue";
 import UserLayout from "./UserLayout.vue";
 
-const baseURL = 'http://localhost:8000';
+const baseURL = 'https://online-z16b.onrender.com';
 axios.defaults.baseURL = baseURL;
 axios.defaults.timeout = 15000;
 

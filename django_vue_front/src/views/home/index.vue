@@ -49,7 +49,7 @@
 export default {
   data() {
     return {
-      Host: "http://127.0.0.1:8000",
+      Host: "https://online-z16b.onrender.com",
       items: [],
       xtgldata: [],
       tableData: []

@@ -61,7 +61,7 @@ export default {
   methods: {
     loadData(page) {
       this.pageNum = page
-      axios.get(`http://localhost:8000/hello/comments/pending/?pageNum=${page}&pageSize=${this.pageSize}`)
+      axios.get(`https://online-z16b.onrender.com/hello/comments/pending/?pageNum=${page}&pageSize=${this.pageSize}`)
         .then(res => {
           this.tableData = res.data.data
           this.total = res.data.zs
@@ -71,7 +71,7 @@ export default {
         })
     },
     audit(id, status) {
-      axios.put(`http://localhost:8000/hello/comment/audit/${id}/`, {
+      axios.put(`https://online-z16b.onrender.com/hello/comment/audit/${id}/`, {
         status,
         isAdmin: localStorage.getItem("isAdmin")
       }).then(res => {

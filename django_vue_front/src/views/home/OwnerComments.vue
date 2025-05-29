@@ -56,7 +56,7 @@ export default {
         return;
       }
 
-      axios.get("http://localhost:8000/hello/owner/comments/", {
+      axios.get("https://online-z16b.onrender.com/hello/owner/comments/", {
         params: { maijia_id: ownerId }
       })
         .then((res) => {
@@ -81,7 +81,7 @@ export default {
         return;
       }
       try {
-        const res = await axios.post('http://localhost:8000/hello/pl/reply/', {
+        const res = await axios.post('https://online-z16b.onrender.com/hello/pl/reply/', {
           pl_id: this.selectedCommentId,
           reply: this.replyContent
         });

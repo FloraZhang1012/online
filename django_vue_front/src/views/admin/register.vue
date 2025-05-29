@@ -76,7 +76,7 @@ export default {
       }
 
       try {
-        const response = await axios.post("http://127.0.0.1:8000/hello/register/", {
+        const response = await axios.post("https://online-z16b.onrender.com/hello/register/", {
           username,
           password,
           value: role

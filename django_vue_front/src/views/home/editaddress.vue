@@ -52,7 +52,7 @@ export default {
     loadAddress() {
       this.loading = true
       const id = this.$route.query.id
-      axios.get(`http://localhost:8000/hello/addr/detail/`, {
+      axios.get(`https://online-z16b.onrender.com/hello/addr/detail/`, {
         params: { id }
       }).then(res => {
         this.form = res.data.data
@@ -66,7 +66,7 @@ export default {
       const id = this.$route.query.id
       this.$refs.formRef.validate(valid => {
         if (!valid) return
-        axios.put(`http://localhost:8000/hello/addr/update/`, {
+        axios.put(`https://online-z16b.onrender.com/hello/addr/update/`, {
           id,
           ...this.form
         }).then(res => {

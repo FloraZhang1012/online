@@ -87,7 +87,7 @@ export default {
           if (info.img_url) {
             this.userAvatar = info.img_url.startsWith("http")
               ? info.img_url
-              : `http://localhost:8000/upimg/${info.img_url}`;
+              : `https://online-z16b.onrender.com/upimg/${info.img_url}`;
           }
         }
       });
@@ -115,7 +115,7 @@ export default {
       const uid = this.userInfoid;
       if (!uid) return;
 
-      axios.get("http://localhost:8000/hello/notify/", {
+      axios.get("https://online-z16b.onrender.com/hello/notify/", {
         params: { user_id: uid }
       }).then(res => {
         if (res.data.code === 200) {

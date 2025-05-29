@@ -7,7 +7,7 @@
       ref="upload"
       class="upload-demo"
       drag
-      action="http://localhost:8000/hello/lb/upload/"
+      action="https://online-z16b.onrender.com/hello/lb/upload/"
       :on-success="handleSuccess"
       :show-file-list="false"
       :data="{ title: newTitle }"
@@ -71,12 +71,12 @@ export default {
   methods: {
     // 🔗 拼接图片路径
     getImageUrl(url) {
-      return `http://localhost:8000/upimg/${url}`;
+      return `https://online-z16b.onrender.com/upimg/${url}`;
     },
     // 📥 加载数据
     loadData(page) {
       this.pageNum = page;
-      axios.get('http://localhost:8000/hello/lb/', {
+      axios.get('https://online-z16b.onrender.com/hello/lb/', {
         params: { pageNum: page, pageSize: this.pageSize }
       }).then(res => {
         this.tableData = res.data.data;
@@ -105,7 +105,7 @@ export default {
         cancelButtonText: '取消 / Cancel',
         type: 'warning'
       }).then(() => {
-        axios.delete(`http://localhost:8000/hello/lb/delete/${id}/`).then(res => {
+        axios.delete(`https://online-z16b.onrender.com/hello/lb/delete/${id}/`).then(res => {
           this.$message.success(res.data.message || '删除成功 / Deleted');
           this.loadData(this.pageNum);
         });

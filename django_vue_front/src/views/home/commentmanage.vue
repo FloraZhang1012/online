@@ -65,7 +65,7 @@ export default {
   methods: {
     loadData(page) {
       this.pageNum = page
-      axios.get(`http://localhost:8000/hello/comments/all/`, {
+      axios.get(`https://online-z16b.onrender.com/hello/comments/all/`, {
         params: {
           pageNum: page,
           pageSize: this.pageSize,
@@ -84,7 +84,7 @@ export default {
         cancelButtonText: '取消 / No',
         type: 'warning'
       }).then(() => {
-        axios.delete(`http://localhost:8000/hello/comment/delete/${id}/`).then(res => {
+        axios.delete(`https://online-z16b.onrender.com/hello/comment/delete/${id}/`).then(res => {
           this.$message.success(res.data.message || "删除成功 / Deleted successfully")
           this.loadData(this.pageNum)
         })

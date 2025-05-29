@@ -92,7 +92,7 @@
       <el-avatar :size="100" :src="getImg(selectedUser.avatar)" style="margin: 10px 0;" />
 
       <el-upload
-        :action="`http://localhost:8000/hello/upload_avatar/`"
+        :action="`https://online-z16b.onrender.com/hello/upload_avatar/`"
         :data="{ user_id: selectedUser.id, isAdmin: getIsAdmin(selectedUser.role) }"
         name="file"
         :show-file-list="false"
@@ -115,7 +115,7 @@ import { ElMessage } from 'element-plus'
 import { ElMessageBox } from 'element-plus'
 
 
-axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.baseURL = 'https://online-z16b.onrender.com'
 
 const users = ref([])
 const total = ref(0)
@@ -157,7 +157,7 @@ const loadUsers = async (page = 1) => {
 onMounted(() => loadUsers())
 
 const getImg = (img) => {
-  return img ? `http://localhost:8000/upimg/${img}` : 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png'
+  return img ? `https://online-z16b.onrender.com/upimg/${img}` : 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png'
 }
 
 const viewUser = (user) => {

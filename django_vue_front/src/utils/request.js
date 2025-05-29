@@ -2,7 +2,7 @@ import axios from 'axios'
 import { ElMessage } from 'element-plus'
 import Router from '../router'
 
-let hostURL = 'http://127.0.0.1:8000'
+let hostURL = 'https://online-z16b.onrender.com'
 
 // 创建axios实例
 const request = axios.create({

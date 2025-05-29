@@ -99,7 +99,7 @@ export default {
     loadData(page) {
       this.pageNum = page
       const userId = localStorage.getItem("user_id")
-      axios.get(`http://localhost:8000/hello/comments/my/`, {
+      axios.get(`https://online-z16b.onrender.com/hello/comments/my/`, {
         params: {
           userId,
           pageNum: page,
@@ -118,7 +118,7 @@ export default {
       this.dialogVisible = true
     },
     submitEdit() {
-      axios.put(`http://localhost:8000/hello/comment/edit/${this.editingId}/`, {
+      axios.put(`https://online-z16b.onrender.com/hello/comment/edit/${this.editingId}/`, {
         content: this.editContent
       }).then(res => {
         this.$message.success(res.data.message || '修改成功 / Edit success')

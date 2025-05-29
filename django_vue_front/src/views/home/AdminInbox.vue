@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     loadInbox() {
-      axios.get("http://localhost:8000/hello/admin/inbox/", {
+      axios.get("https://online-z16b.onrender.com/hello/admin/inbox/", {
         params: { user_id: this.adminId }
       }).then(res => {
         this.inbox = res.data.data || [];

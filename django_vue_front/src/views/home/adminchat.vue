@@ -65,8 +65,8 @@ export default {
       this.messages = [];
 
       const url = this.receiverRole === 'owner'
-        ? 'http://localhost:8000/hello/owner/list/'
-        : 'http://localhost:8000/hello/user/list/';  // 确保你后端有这个接口
+        ? 'https://online-z16b.onrender.com/hello/owner/list/'
+        : 'https://online-z16b.onrender.com/hello/user/list/';  // 确保你后端有这个接口
 
       axios.get(url)
         .then(res => {
@@ -79,7 +79,7 @@ export default {
     loadMessages() {
       if (!this.receiverId || !this.adminId || !this.receiverRole) return;
 
-      axios.get('http://localhost:8000/hello/message/list/', {
+      axios.get('https://online-z16b.onrender.com/hello/message/list/', {
         params: {
           sender_id: this.adminId,
           sender_role: 'admin',
@@ -99,7 +99,7 @@ export default {
     sendMessage() {
       if (!this.newMessage.trim() || !this.receiverId) return;
 
-      axios.post('http://localhost:8000/hello/message/send/', {
+      axios.post('https://online-z16b.onrender.com/hello/message/send/', {
         sender_id: this.adminId,
         sender_role: 'admin',
         receiver_id: this.receiverId,

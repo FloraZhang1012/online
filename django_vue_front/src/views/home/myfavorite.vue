@@ -80,7 +80,7 @@ export default {
   methods: {
     loadFavorites() {
       this.loading = true;
-      axios.get("http://localhost:8000/hello/sc/list/", {
+      axios.get("https://online-z16b.onrender.com/hello/sc/list/", {
         params: {
           userId: this.userId,
           limit: this.pageSize,
@@ -94,7 +94,7 @@ export default {
       });
     },
     removeFavorite(jingquId) {
-      axios.delete("http://localhost:8000/hello/sc/delete/", {
+      axios.delete("https://online-z16b.onrender.com/hello/sc/delete/", {
         params: {
           userId: this.userId,
           jingquId: jingquId
@@ -107,7 +107,7 @@ export default {
       });
     },
     getImageUrl(imgUrl) {
-      return `http://localhost:8000/upimg/${imgUrl}`;
+      return `https://online-z16b.onrender.com/upimg/${imgUrl}`;
     },
     handlePageChange(page) {
       this.currentPage = page;

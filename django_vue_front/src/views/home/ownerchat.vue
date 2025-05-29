@@ -89,8 +89,8 @@ export default {
       this.messages = [];
 
       const url = this.receiverRole === 'admin'
-        ? 'http://localhost:8000/hello/admin/list/'
-        : 'http://localhost:8000/hello/user/list/';
+        ? 'https://online-z16b.onrender.com/hello/admin/list/'
+        : 'https://online-z16b.onrender.com/hello/user/list/';
 
       axios.get(url)
         .then(res => {
@@ -103,7 +103,7 @@ export default {
     loadMessages() {
       if (!this.receiverId || !this.receiverRole) return;
 
-      axios.get('http://localhost:8000/hello/message/list/', {
+      axios.get('https://online-z16b.onrender.com/hello/message/list/', {
         params: {
           sender_id: this.ownerId,
           sender_role: 'owner',
@@ -123,7 +123,7 @@ export default {
     sendMessage() {
       if (!this.newMessage.trim() || !this.receiverId) return;
 
-      axios.post('http://localhost:8000/hello/message/send/', {
+      axios.post('https://online-z16b.onrender.com/hello/message/send/', {
         sender_id: this.ownerId,
         sender_role: 'owner',
         receiver_id: this.receiverId,

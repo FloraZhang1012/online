@@ -39,7 +39,7 @@ export default {
     fetchOrders() {
       this.loading = true;
       axios
-        .get("http://localhost:8000/hello/dingdan/all/", {
+        .get("https://online-z16b.onrender.com/hello/dingdan/all/", {
           params: {
             maijia_id: localStorage.getItem("userInfoid")
           }

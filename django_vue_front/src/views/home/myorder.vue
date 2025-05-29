@@ -67,7 +67,7 @@ export default {
     fetchOrders() {
       this.loading = true
       axios
-        .get('http://localhost:8000/hello/dingdan/my/', {
+        .get('https://online-z16b.onrender.com/hello/dingdan/my/', {
           params: { userId: localStorage.getItem('user_id') }
         })
         .then(res => {
@@ -84,7 +84,7 @@ export default {
     },
     payOrder(orderId) {
       axios
-        .post(`http://localhost:8000/hello/dingdan/pay/${orderId}/`)
+        .post(`https://online-z16b.onrender.com/hello/dingdan/pay/${orderId}/`)
         .then(res => {
           this.$message.success(res.data.message || "支付成功 / Payment success")
           this.fetchOrders()
@@ -100,7 +100,7 @@ export default {
         type: "warning"
       }).then(() => {
         axios
-          .delete(`http://localhost:8000/hello/dingdan/cancel/${orderId}/`)
+          .delete(`https://online-z16b.onrender.com/hello/dingdan/cancel/${orderId}/`)
           .then(res => {
             this.$message.success(res.data.message || "取消成功 / Canceled")
             this.fetchOrders()

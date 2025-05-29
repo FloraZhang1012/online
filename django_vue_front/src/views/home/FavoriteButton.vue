@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     checkIfCollected() {
-      axios.get(`http://localhost:8000/hello/sc/check/`, {
+      axios.get(`https://online-z16b.onrender.com/hello/sc/check/`, {
         params: {
           userId: this.userId,
           jingquId: this.jingquId
@@ -48,7 +48,7 @@ export default {
 
       if (this.isCollected) {
         // 使用 DELETE 方法
-        axios.delete(`http://localhost:8000/hello/sc/delete/`, {
+        axios.delete(`https://online-z16b.onrender.com/hello/sc/delete/`, {
           params: {
             userId: this.userId,
             jingquId: this.jingquId
@@ -61,7 +61,7 @@ export default {
         })
       } else {
         // 使用 POST 方法收藏
-        axios.post(`http://localhost:8000/hello/sc/add/`, {
+        axios.post(`https://online-z16b.onrender.com/hello/sc/add/`, {
           userId: this.userId,
           jingquId: this.jingquId
         }).then(res => {

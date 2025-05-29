@@ -53,7 +53,7 @@ export default {
   methods: {
     loadAddresses() {
       this.loading = true
-      axios.get('http://localhost:8000/hello/addr/my/', {
+      axios.get('https://online-z16b.onrender.com/hello/addr/my/', {
         params: { userId: localStorage.getItem('user_id') }
       }).then(res => {
         this.addresses = res.data.data
@@ -72,7 +72,7 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-        axios.delete(`http://localhost:8000/hello/addr/`, {
+        axios.delete(`https://online-z16b.onrender.com/hello/addr/`, {
           params: { id }
         }).then(() => {
           this.$message.success("删除成功")

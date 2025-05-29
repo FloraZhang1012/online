@@ -15,7 +15,7 @@ import * as echarts from 'echarts';
 import api from './utils/api.js';
 
 
-const Host = 'http://127.0.0.1:8000'
+const Host = 'https://online-z16b.onrender.com'
 
 const app = createApp(App);
 

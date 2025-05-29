@@ -60,7 +60,7 @@ export default {
         return;
       }
 
-      axios.get("http://localhost:8000/hello/notify/list/", {
+      axios.get("https://online-z16b.onrender.com/hello/notify/list/", {
         params: { userId }
         })
 
@@ -77,7 +77,7 @@ export default {
     },
     markAsRead(id) {
       axios
-        .post(`http://localhost:8000/hello/notify/read/${id}/`)
+        .post(`https://online-z16b.onrender.com/hello/notify/read/${id}/`)
         .then(() => {
           this.$message.success("标记成功 / Marked as read");
           this.fetchNotifications();

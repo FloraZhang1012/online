@@ -48,7 +48,7 @@ export default {
     submitForm() {
       this.$refs.formRef.validate(valid => {
         if (!valid) return
-        axios.post('http://localhost:8000/hello/addr/', {
+        axios.post('https://online-z16b.onrender.com/hello/addr/', {
           username: this.form.username,
           shouji: this.form.shouji,
           addr: this.form.addr,

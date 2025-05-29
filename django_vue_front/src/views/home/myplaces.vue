@@ -77,7 +77,7 @@
         <el-form-item label="封面图 Cover Image">
           <el-upload
             class="upload-demo"
-            action="http://localhost:8000/hello/upload_avatar/"
+            action="https://online-z16b.onrender.com/hello/upload_avatar/"
             :on-success="handleUploadSuccess"
             :show-file-list="false"
             name="file"
@@ -98,7 +98,7 @@
 <script>
 import axios from "axios";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://online-z16b.onrender.com";
 axios.defaults.baseURL = baseURL;
 axios.defaults.timeout = 15000;
 
