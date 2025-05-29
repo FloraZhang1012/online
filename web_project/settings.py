@@ -85,17 +85,11 @@ WSGI_APPLICATION = 'web_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ts',  # 你的数据库名
-        'USER': 'root',
-        'PASSWORD': '00000000',
-        'HOST': '127.0.0.1',  # 本地开发
-        'PORT': '3306',
-        'OPTIONS': {
-            'charset': 'utf8mb4'
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 CORS_ALLOW_ALL_ORIGINS = True  # 允许所有前端访问
 CORS_ORIGIN_ALLOW_ALL = True  # ✅ 加上这一行兼容旧版本
 
