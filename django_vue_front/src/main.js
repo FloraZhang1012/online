@@ -15,7 +15,7 @@ import * as echarts from 'echarts';
 import api from './utils/api.js';
 
 
-const Host = 'https://online-z16b.onrender.com'
+const Host = 'axios.get("https://online-z16b.onrender.com/hello/lb/")'
 
 const app = createApp(App);
 
