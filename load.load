@@ -1,0 +1,13 @@
+LOAD DATABASE
+     FROM mysql://root:00000000@localhost:3306/ts
+     INTO pgsql://ts_db_re5i_user:931TnMf1zvyh25Ci2zM4TOXA5CxNSudV@dpg-d11v80p5pdvs73c5t760-a.oregon-postgres.render.com:5432/ts_db_re5i?sslmode=require
+
+ WITH include no drop,
+      create tables,
+      create indexes,
+      preserve index names,
+      batch rows = 1000,
+      data only
+
+SET work_mem to '16MB',
+    maintenance_work_mem to '512 MB';
