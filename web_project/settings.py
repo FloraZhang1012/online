@@ -180,11 +180,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:5173",
+    "https://online-1-3ut1.onrender.com",
 ]
 
 # 如果你用的是 Django 4.0+
 # 还要设置：
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "https://online-1-3ut1.onrender.com",
 ]
