@@ -79,6 +79,8 @@ WSGI_APPLICATION = 'web_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+import pymysql
+pymysql.install_as_MySQLdb()
 
 
 
@@ -87,11 +89,11 @@ import os
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
+        'NAME': os.getenv('DB_NAME', 'railway'),
+        'USER': os.getenv('DB_USER', 'root'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'QUKClJTNVDXHaszgCxHzGFyTlrXeafKf'),
+        'HOST': os.getenv('DB_HOST', 'nozomi.proxy.rlwy.net'),
+        'PORT': os.getenv('DB_PORT', '11835'),
     }
 }
 
