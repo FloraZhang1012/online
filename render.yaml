@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: django-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn web_project.wsgi:application
+    envVars:
+      - key: DB_NAME
+        value: railway
+      - key: DB_USER
+        value: root
+      - key: DB_PASSWORD
+        value: QUKClJTNVDXHaszgCxHzGFyTlrXeafKf
+      - key: DB_HOST
+        value: nozomi.proxy.rlwy.net
+      - key: DB_PORT
+        value: 11835
