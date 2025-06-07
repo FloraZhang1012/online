@@ -83,16 +83,20 @@ WSGI_APPLICATION = 'web_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ts', 
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': '00000000',
-        'HOST': '127.0.0.1',  
-        'PORT': '3306',
+        'PASSWORD': 'QUKClJTNVDXHaszgCxHzGFyTlrXeafKf',
+        'HOST': 'nozomi.proxy.rlwy.net',
+        'PORT': '11835',
         'OPTIONS': {
-            'charset': 'utf8mb4'
-        }
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'ssl': {'ssl-mode': 'REQUIRED'},
+        },
     }
 }
+
+
+
 CORS_ALLOW_ALL_ORIGINS = True  
 CORS_ORIGIN_ALLOW_ALL = True  
 
